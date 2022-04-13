@@ -102,7 +102,49 @@
 //     lineJoin: 'round' // 折线拐点连接处样式
 // });
 
+    var marker1 = new AMap.Marker({
+    position: new AMap.LngLat(120.119831,30.261489),   // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+    });
+
+    var marker2 = new AMap.Marker({
+    position: new AMap.LngLat(120.120152,30.262352),   // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+    });
+
+    var marker3 = new AMap.Marker({
+    position: new AMap.LngLat(120.120825,30.262635),   // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+    });
+
+    var marker4 = new AMap.Marker({
+    position: new AMap.LngLat(120.121936,30.262283),   // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+    });
+
+    var marker5 = new AMap.Marker({
+    position: new AMap.LngLat(120.122101,30.262661),   // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+    });
+
+    var marker6 = new AMap.Marker({
+    position: new AMap.LngLat(120.121944,30.262708),   // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+    });
+
+    var marker7 = new AMap.Marker({
+    position: new AMap.LngLat(120.123355,30.266285),   // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+    });
+
+    var marker8 = new AMap.Marker({
+    position: new AMap.LngLat(120.124323,30.266124),   // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+    });
+
+    var marker9 = new AMap.Marker({
+    position: new AMap.LngLat(120.127309,30.26526),   // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+    });
+
+    var marker10 = new AMap.Marker({
+    position: new AMap.LngLat(120.127192,30.265347),   // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+    });
+    var markerList = [marker1, marker2,marker3,marker4,marker5,marker6,marker7,marker8,marker9,marker10];
+
     map.add(polyline);
+    map.add(markerList);
     map.setFitView();
   </script>
 </body>

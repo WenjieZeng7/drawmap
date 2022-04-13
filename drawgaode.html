@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <style>
+    html,
+    body,
+    #container {
+      width: 100%;
+      height: 100%;
+    }
+    </style>
+    <title>折线的绘制和编辑</title>
+    <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css" />
+    <script src="https://webapi.amap.com/maps?v=2.0&key=	1aeb4ad6b18495c7d2f8bd8f8c01f3bf&plugin=AMap.PolylineEditor"></script>
+    <script src="https://a.amap.com/jsapi_demos/static/demo-center/js/demoutils.js"></script>
+</head>
+<body>
+<div id="container"></div>
+<script type="text/javascript">
+    var map = new AMap.Map("container", {
+      center: [116.395577, 39.892257],
+      zoom: 14
+    });
+
+    var path = [
+    // new AMap.LngLat(116.398258,39.904600),
+        [120.120004,30.261445],
+[120.119831,30.261489],
+[120.119831,30.261489],
+[120.119948,30.261871],
+[120.120026,30.262066],
+[120.120152,30.262352],
+[120.120152,30.262352],
+[120.120495,30.262248],
+[120.120603,30.262253],
+[120.120668,30.262287],
+[120.120686,30.262309],
+[120.120825,30.262635],
+[120.120825,30.262635],
+[120.121602,30.262409],
+[120.121753,30.262352],
+[120.121936,30.262283],
+[120.121936,30.262283],
+[120.122101,30.262661],
+[120.122101,30.262661],
+[120.121944,30.262708],
+[120.121944,30.262708],
+[120.122235,30.263455],
+[120.122296,30.263615],
+[120.122582,30.264332],
+[120.122869,30.265026],
+[120.122982,30.26533],
+[120.123194,30.265846],
+[120.123355,30.266285],
+[120.123355,30.266285],
+[120.12401,30.266102],
+[120.124049,30.266098],
+[120.124323,30.266124],
+[120.124323,30.266124],
+[120.12451,30.266068],
+[120.124822,30.265968],
+[120.125143,30.265877],
+[120.125417,30.265803],
+[120.125625,30.265712],
+[120.125781,30.265668],
+[120.125898,30.265638],
+[120.126059,30.265595],
+[120.126185,30.26556],
+[120.12717,30.265299],
+[120.12724,30.265278],
+[120.127309,30.26526],
+[120.127309,30.26526],
+[120.127335,30.265308],
+[120.127261,30.26533],
+[120.127192,30.265347],
+    ];
+
+    var polyline = new AMap.Polyline({
+      path: path,
+      isOutline: true,
+      outlineColor: '#ffeeff',
+      borderWeight: 3,
+      strokeColor: "#3366FF",
+      strokeOpacity: 1,
+      strokeWeight: 6,
+      // 折线样式还支持 'dashed'
+      strokeStyle: "solid",
+      // strokeStyle是dashed时有效
+      strokeDasharray: [10, 5],
+      lineJoin: 'round',
+      lineCap: 'round',
+      zIndex: 50,
+    });
+
+//     var polyline = new AMap.Polyline({
+//     path: path,
+//     borderWeight: 2, // 线条宽度，默认为 1
+//     strokeColor: 'red', // 线条颜色
+//     lineJoin: 'round' // 折线拐点连接处样式
+// });
+
+    map.add(polyline);
+    map.setFitView();
+  </script>
+</body>
+</html>
